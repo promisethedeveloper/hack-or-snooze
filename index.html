@@ -17,7 +17,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Cummulative Project</title>
+		<title>Hack or Snooze</title>
 		<link
 			rel="stylesheet"
 			href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
@@ -36,7 +36,7 @@
 			<div class="navbar-brand">
 				<a class="nav-link" href="#" id="nav-all">Hack or Snooze</a>
 			</div>
-			<div class="main-nav-links hidden" style="display: block">
+			<div class="main-nav-links hidden">
 				|
 				<a class="nav-link" href="#" id="nav-submit-story">submit</a>
 				|
@@ -53,21 +53,21 @@
 
 		<!-- area for stories (all stories, user stories, favorites) -->
 		<section class="stories-container container">
-			<!-- story form -->
-			<form action="" id="story-form" class="story-form hidden" method="post">
-				<div class="login-input">
-					<label for="author-name">author</label>
-					<input id="author-name" required />
+			<!-- form for submitted new story -->
+			<form action="" class="hidden" id="submit-form">
+				<div>
+					<label for="create-author">author</label>
+					<input id="create-author" required placeholder="author name" />
 				</div>
-				<div class="login-input">
-					<label for="story-title">title</label>
-					<input id="story-title" required />
+				<div>
+					<label for="create-title">title</label>
+					<input id="create-title" required placeholder="story title" />
 				</div>
-				<div class="login-input">
-					<label for="story-url">url</label>
-					<input id="story-url" required />
+				<div>
+					<label for="create-url">url</label>
+					<input id="create-url" required type="url" placeholder="story url" />
 				</div>
-				<button type="submit" id="submit-btn">Submit</button>
+				<button type="submit">submit</button>
 				<hr />
 			</form>
 
@@ -136,6 +136,18 @@
 				</div>
 				<button type="submit">create account</button>
 			</form>
+		</section>
+
+		<!-- User profile -->
+		<section id="user-profile" class="hidden">
+			<div class="user-profile-box container">
+				<h4>User Profile Info</h4>
+				<section>
+					<div>Name: <span id="profile-name">Name:</span></div>
+					<div>Username: <span id="profile-username">Username:</span></div>
+					<div>Account Created: <span id="profile-account-date"></span></div>
+				</section>
+			</div>
 		</section>
 
 		<!-- Library JS & our JS -->
